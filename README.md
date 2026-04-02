@@ -4,6 +4,8 @@
 
 Furkan Pala & Islem Rekik — BASIRA Lab, Imperial-X, Imperial College London
 
+![Main Fig](main_fig.png)
+
 ---
 
 ## What is it?
