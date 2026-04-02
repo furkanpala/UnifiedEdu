@@ -293,11 +293,12 @@ def round_status():
         }), 200
 
 
-# ── Entry Point ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))   # ← Cloud platforms set $PORT
     logger.info("=" * 60)
     logger.info("  UnifiedEdu Aggregation Server")
+    logger.info(f"  Listening on port      : {port}")
     logger.info(f"  Min clients to aggregate : {MIN_CLIENTS_TO_AGGREGATE}")
     logger.info(f"  Round timeout            : {ROUND_TIMEOUT_SECONDS}s")
     logger.info("=" * 60)
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host="0.0.0.0", port=port, debug=False)
